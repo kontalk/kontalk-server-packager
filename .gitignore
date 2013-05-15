@@ -1,0 +1,6 @@
+debian/*/Release*
+debian/**/*/*deb
+debian/*/Packages
+debian/release-*
+sync-packages.sh
+.vagrant
