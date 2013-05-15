@@ -1,10 +1,12 @@
 # kontalk-packager
 
-Vagrant project to build [Kontalk](http://kontalk.net) server Debian packages.
-
+Vagrant project to build development [Kontalk](http://kontalk.net) server Debian packages.
 Currently builds packages for Debian 7.0 (Wheezy), amd64.
 
 More distributions and package formats will be supported in the future.
+
+The idea is to have Debian packages quickly built for testing/deployment purposes 
+with minimal fuss including all the dependencies required.
 
 ## Requirements
 
@@ -25,12 +27,12 @@ Run vagrant to build the package:
 
 This will take some time.
 
-The resulting amd64 binary package will be available in
-debian/wheezy/amd64 after that.
+The resulting **amd64 binary package** will be available in
+**debian/wheezy/amd64** after that.
 
 ## Project layout
 
-**Kontalk configuration templates**
+### Kontalk configuration templates
 
 Kontalk server services configuration templates bundled with the package.
 
@@ -40,7 +42,7 @@ resolver.conf
 c2s.conf
 ```
 
-**Init scripts**
+### Init scripts
 
 Init scripts installed for router, resolver and c2s services.
 
@@ -50,12 +52,12 @@ kontalk-resolver
 kontalk-c2s
 ```
 
-**Provisioning scripts**
+### Provisioning scripts
 
-provision.sh is the shell script that does all the heavy lifting when building the
+**provision.sh** is the shell script that does all the heavy lifting when building the
 kontalk packages inside the VM.
 
-**GnuPG configuration**
+### GnuPG configuration
 
 GnuPG config used to generate Kontalk server keys easily without
 
@@ -68,4 +70,3 @@ There are also some additional dependencies
 pulled from Debian repos like mysql-server, python, etc, not bundled since the available versions
 in the Debian repos are good and we don't need to bundle them.
 
- 
