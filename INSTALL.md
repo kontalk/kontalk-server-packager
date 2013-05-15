@@ -12,8 +12,7 @@ SSL and GPG configurations and safer database credentials.
 
 Add the repo to your sources:
 
-    echo deb http://apt.kontalk.rbel.co/debian/wheezy/ ./ \ 
-         > /etc/apt/sources.list.d/kontalk.list
+    echo deb http://apt.kontalk.rbel.co/debian/wheezy/ ./ > /etc/apt/sources.list.d/kontalk.list
     wget http://rubiojr.rbel.co/rubiojr.asc -O - | apt-key add -
     apt-get update
 
