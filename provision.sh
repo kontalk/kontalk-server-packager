@@ -10,7 +10,7 @@ CFG_DIR=/etc/kontalk
 LOG_DIR=/var/log/kontalk
 INIT_SCRIPTS_DIR=$SERVER_DIR/init-scripts
 CODENAME=`lsb_release -c|awk '{print $2}'`
-PKG_ARCH=`dpkg-architecture -qDEB_BUILD_ARCH`
+PKG_ARCH=`dpkg --print-architecture`
 
 export DEBIAN_FRONTEND=noninteractive 
 
